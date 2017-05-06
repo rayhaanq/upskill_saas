@@ -18,8 +18,8 @@
     </button>
 
     <div class="container">
-      
-      <%= link_to "/", class: "navbar-brand" do %>
+
+      <%= link_to root_path, class: "navbar-brand" do %>
         <i class="fa fa-handshake-o "></i>
         DevMatch
       <% end %>
@@ -29,7 +29,7 @@
         <ul class="navbar-nav ml-auto">
 
           <li class="nav-item">
-            <%= link_to "About", "/about", class: "nav-link" %>
+            <%= link_to "About", about_path, class: "nav-link" %>
           </li>
 
         </ul>
