@@ -7,8 +7,13 @@ h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1 {
+.home-header {
   padding-top: 150px;
+}
+
+#about-content,
+#contact-form-content{
+  margin-top: 150px;
 }
 
 .home-header,
