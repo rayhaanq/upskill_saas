@@ -6,8 +6,9 @@
 
 
       <div class="offset-md-3 col-md-6">
+        <%= flash[:notice] %>
 <div class="card card-block bg-faded">
-        <%= form_for "/contacts" do |f| %>
+        <%= form_for @contact, url: contacts_path, method: 'POST' do |f| %>
 
         <div class="form-group row">
           <%= f.label :name, 'Name: ', class: 'col-sm-3 col-md-4' %>
