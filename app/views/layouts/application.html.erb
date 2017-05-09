@@ -8,37 +8,41 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
-
   <body>
-<nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-    <div class="container">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <%= link_to root_path, class: "navbar-brand" do %>
+      <div class="container">
+
+        <%= link_to root_path, class: "navbar-brand" do %>
         <i class="fa fa-handshake-o "></i>
         DevMatch
-      <% end %>
+        <% end %>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
 
-          <li class="nav-item">
-            <%= link_to "About", about_path, class: "nav-link" %>
-          </li>
+            <li class="nav-item">
+              <%= link_to "About", about_path, class: "nav-link" %>
+            </li>
 
-        </ul>
+            <li class="nav-item">
+              <%= link_to "Contact Us", new_contact_path, class: "nav-link" %>
+            </li>
+
+          </ul>
+
+        </div>
 
       </div>
+    </nav>
 
-    </div>
-  </nav>
-    <div id="content" >
+    <div id="content">
 
       <%= yield %>
     </div>
