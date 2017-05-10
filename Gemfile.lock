@@ -1,8 +1,14 @@
 GIT
-  remote: https://github.com/plataformatec/devise.git
-  revision: a62faa2c8258ba1c35fe84e147f42c35eccccb8a
+  remote: https://github.com/codahale/bcrypt-ruby.git
+  revision: 23b0517e20e7ddf2e733c1bcdb22b0b12166f042
   specs:
-    devise (4.2.1)
+    bcrypt (3.1.11)
+
+GIT
+  remote: https://github.com/plataformatec/devise.git
+  revision: ee01bac8b0b828b3da0d79c46115ba65c433d6c8
+  specs:
+    devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0, < 5.2)
@@ -55,7 +61,6 @@ GEM
     arel (8.0.0)
     autoprefixer-rails (7.0.1)
       execjs
-    bcrypt (3.1.11-x86-mingw32)
     bindex (0.5.0)
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
@@ -88,9 +93,9 @@ GEM
       activesupport (>= 4.2.0)
     hirb (0.7.3)
     i18n (0.8.1)
-    jbuilder (2.6.3)
-      activesupport (>= 3.0.0, < 5.2)
-      multi_json (~> 1.2)
+    jbuilder (2.6.4)
+      activesupport (>= 3.0.0)
+      multi_json (>= 1.2)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -129,9 +134,9 @@ GEM
       railties (= 5.1.0)
       sprockets-rails (>= 2.0.0)
     rails-assets-tether (1.4.0)
-    rails-dom-testing (2.0.2)
-      activesupport (>= 4.2.0, < 6.0)
-      nokogiri (~> 1.6)
+    rails-dom-testing (2.0.3)
+      activesupport (>= 4.2.0)
+      nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     railties (5.1.0)
@@ -194,6 +199,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt!
   bootstrap (~> 4.0.0.alpha6)
   byebug
   capybara (~> 2.13.0)

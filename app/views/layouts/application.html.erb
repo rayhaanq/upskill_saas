@@ -35,6 +35,12 @@
               <%= link_to "Contact Us", new_contact_path, class: "nav-link" %>
             </li>
 
+            <% if user_signed_in? %>
+            <li class="nav-item mx-2">
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+            </li>
+
+          <% else %>
             <li class="nav-item mx-2">
               <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
             </li>
@@ -43,6 +49,7 @@
               <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success" %>
             </li>
 
+            <% end %>
           </ul>
 
         </div>
@@ -50,13 +57,12 @@
       </div>
     </nav>
 
+    <div class="container error-msg">
+      <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
 
-      <div class="container error-msg">
-        <% flash.each do |type, msg| %>
-          <%= content_tag :div, msg, class: "alert alert-#{type}" %>
-        <% end %>
-      </div>
-
-      <%= yield %>
+    <%= yield %>
   </body>
 </html>

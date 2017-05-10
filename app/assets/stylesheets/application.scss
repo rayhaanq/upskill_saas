@@ -73,4 +73,15 @@ h3 {
     background-color: #FF512F;
     border-color: #FF512F;
   }
+  &:active{
+    border-color: #FF512F;
+    background-color: #FF512F;
+  }
+  &:focus{
+    border-color: #FF512F;
+    background-color: #FF512F;
+    -webkit-box-shadow: #FF512F;
+    box-shadow:#FF512F;
+    color: white;
+  }
 }
