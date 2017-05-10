@@ -42,10 +42,13 @@
       </div>
     </nav>
 
-    <div id="content">
+
+      <div class="container error-msg">
+        <% flash.each do |type, msg| %>
+          <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+        <% end %>
+      </div>
 
       <%= yield %>
-    </div>
-
   </body>
 </html>
